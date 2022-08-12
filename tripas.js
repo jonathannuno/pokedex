@@ -53,8 +53,10 @@ const renderPokemonData = data => {
     setCardColor(types);
     renderPokemonTypes(types);
     renderPokemonStats(stats);
-    pokeWeight.textContent = `Weight: ${data.weight}`;
-    pokeHeight.textContent = `Height: ${data.height}`;
+    let pesoOperación = data.weight * 0.1;
+    let peso = pesoOperación.toFixed(1);
+    pokeWeight.textContent = `Weight: ${peso} kg.`;
+    pokeHeight.textContent = `Height: ${data.height * 10} cm`;
 }
 
 const setCardColor = types => {
