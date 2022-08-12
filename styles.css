@@ -1,0 +1,249 @@
+/* Estilos del search */
+body{
+    margin: 0; 
+    padding: 0;
+    background: #19161c;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.box{
+    margin-top: 2%;
+    position: relative;
+}
+
+.input {
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: 4px solid white;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    color: white;
+    outline: none;
+    transition: .5s;
+}
+
+.box:hover input{
+    width: 350px;
+    background: #3b3640;
+    border-radius: 10px;
+}
+
+.box i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: white;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
+
+.poke-card {
+    position: relative;
+    height: fit-content;
+    font-family: 'Roboto', sans-serif;
+    width: 315px;
+    border-radius: 4px;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    background: linear-gradient(
+        to top,
+        #FF0000 0%,
+        #FF0000 50%,
+         #3B4CCA 50%,
+         #3B4CCA 100%
+         );
+    border: 1px solid black;
+    text-transform: uppercase;
+}
+
+.poke-card::before {
+    content: '';
+    background: radial-gradient(white 33%, transparent 33%);
+    background-size: 3px 3px;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+}
+
+.img-container {
+    display: flex;
+    position: relative;
+    width: 180px;
+    margin: 10px auto;
+}
+
+.personal {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 5px;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.poke-stats div {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.poke-types div {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    color: #3c5aa6;
+}
+
+.poke-img {
+    width: 180px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* Boton lista*/
+
+.lista-cta {
+    font-family: ;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    padding: .5em 1.5em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #222222bd;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s
+}
+
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal__contenedor {
+    margin: auto;
+    width: 50%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: flex;
+    flex-direction: column;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.contenedor-de-lista {
+    display: flex;
+}
+
+.pokemones-lista {
+    width: 60%;
+}
+
+.pokemones-lista .lista-item {
+    text-transform: capitalize;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: stretch;
+    font-size: 14px;
+    height: 30px;
+    padding-bottom: 5px;
+    flex-wrap: wrap;
+    overflow-x: hidden;    
+}
+
+.lista-item:hover {
+    background: #85cbf2;
+    color: black;
+  }
+
+.right-container__buttons {
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.left-button,
+.right-button {
+    color: white;
+    padding: .5em 1.5em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    align-items: center;
+    background: #3B4CCA;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+.modal__close {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    padding: .5em 1.5em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modal__close:hover {
+    color: #FF0000;
+    background-color: #FFFFFF;
+    border: 1 solid #FF0000;
+}
+

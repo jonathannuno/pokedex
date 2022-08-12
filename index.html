@@ -4,9 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JavaScript -->
+    <script src="tripas.js" defer></script>
+
+
+    <title>Pokedex</title>
 </head>
 <body>
+    <div class="box">
+        <form action="" onsubmit="searchPokemon(event)">
+            <input type="text" class="input" name="pokemon" onmouseout="this.value = ''; this.blur();" autocomplete="off">
+        </form>
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div data-poke-card class="poke-card">
+        <div data-poke-name>Pokedex</div>
+        <div data-poke-img-container class="img-container">
+            <img data-poke-img class="poke-img" src="img/poke-shadow.png" title="¿Quién es ese Pokémon?" alt="¿Quién es ese Pokémon?"/>
+        </div>
+        <div data-poke-id></div>
+        <div data-poke-types class="poke-types"></div>
+        
+        <div class="personal">
+            <div data-poke-weight class="poke-peso"></div>
+            <div data-poke-height class="poke-altura"></div>
+        </div>
+        
+        <div data-poke-stats class="poke-stats"></div>
+
+        <a href="#" class="lista-cta">Lista Pokemon</a>
+    </div>
+
+    <!-- modal -->
+
+    <section class="modal">
+        <div class="modal__contenedor">
+            <div class="contenedor-de-lista">
+                <div class="pokemones-lista">
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                </div>
     
+                <div class="pokemones-lista">
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                    <div class="lista-item"></div>
+                </div>
+            </div>
+            
+
+            <div class="right-container__buttons">
+                <div class="left-button"> PREV </div>
+                <div class="right-button"> SIG </div>
+
+                <a href="#" class="modal__close">Cerrar</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="modal.js"></script>
 </body>
 </html>
